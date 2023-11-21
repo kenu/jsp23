@@ -29,7 +29,7 @@ public class FileUtil {
     // 명시한 파일을 찾아 다운로드합니다.
     public static void download(HttpServletRequest req, HttpServletResponse resp,
             String directory, String sfileName, String ofileName) {
-        String sDirectory = ""; //req.getServletContext().getRealPath(directory);
+        String sDirectory = req.getRealPath(directory);
         try {
             // 파일을 찾아 입력 스트림 생성
             File file = new File(sDirectory, sfileName);
@@ -80,7 +80,7 @@ public class FileUtil {
     // 지정한 위치의 파일을 삭제합니다.
     public static void deleteFile(HttpServletRequest req,
             String directory, String filename) {
-        String sDirectory = req.getServletContext().getRealPath(directory);
+        String sDirectory = req.getRealPath(directory);
         File file = new File(sDirectory + File.separator + filename);
         if (file.exists()) {
             file.delete();
