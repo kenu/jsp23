@@ -29,5 +29,3 @@ if (board.size() == 0) {
 }
 %>
 ${ requestScope["map"]["pagingImg"] }
-</body>
-</html>
