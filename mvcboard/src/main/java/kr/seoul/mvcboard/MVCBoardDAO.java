@@ -65,4 +65,28 @@ public class MVCBoardDAO extends DBConnPool {
 		return board;
 	}
 
+	// 게시글 데이터를 받아 DB에 추가합니다(파일 업로드 지원).
+	public int insertWrite(MVCBoardDTO dto) {
+	    int result = 0;
+	    try {
+	        String query = "INSERT INTO mvcboard ( "
+	                     + " name, title, content, ofile, sfile, pass) "
+	                     + " VALUES ( "
+	                     + " ?,?,?,?,?,?)";
+	        psmt = con.prepareStatement(query);
+	        psmt.setString(1, dto.getName());
+	        psmt.setString(2, dto.getTitle());
+	        psmt.setString(3, dto.getContent());
+	        psmt.setString(4, dto.getOfile());
+	        psmt.setString(5, dto.getSfile());
+	        psmt.setString(6, dto.getPass());
+	        result = psmt.executeUpdate();
+	    }
+	    catch (Exception e) {
+	        System.out.println("게시물 입력 중 예외 발생");
+	        e.printStackTrace();
+	    }
+	    return result;
+	}
+
 }
