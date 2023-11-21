@@ -29,5 +29,6 @@ if (board.size() == 0) {
 }
 %>
 ${ requestScope["map"]["pagingImg"] }
+<button onclick="location.href='../mcvboard/write.do'">글쓰기</button>
 </body>
 </html>
