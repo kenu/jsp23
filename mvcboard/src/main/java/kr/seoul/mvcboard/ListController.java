@@ -36,7 +36,7 @@ public class ListController extends HttpServlet {
 		map.put("pageSize", pageSize);
 		
 		int count = dao.selectCount(map);
-		String pagingImg = BoardPage.pagingStr(count, pageSize, 5, pageNum, "/mvcboard/list.do");
+		String pagingImg = BoardPage.pagingStr(count, pageSize, 5, pageNum, "/list.do");
 		map.put("pagingImg", pagingImg);
 
 		List<MVCBoardDTO> board = dao.selectListPage(map);
