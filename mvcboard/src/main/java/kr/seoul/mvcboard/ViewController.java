@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/mvcboard/view.do")
+@WebServlet("/view.do")
 public class ViewController extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp)
