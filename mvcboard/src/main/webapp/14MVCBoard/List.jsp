@@ -52,7 +52,7 @@
                 ${ count - (((map.pageNum-1) * map.pageSize) + loop.index)}   
             </td>
             <td align="left">  <!-- 제목(링크) -->
-                <a href="../mvcboard/view.do?idx=${ row.idx }">${ row.title }</a> 
+                <a href="./view.do?idx=${ row.idx }">${ row.title }</a> 
             </td> 
             <td>${ row.name }</td>  <!-- 작성자 -->
             <td>${ row.visitcount }</td>  <!-- 조회수 -->
