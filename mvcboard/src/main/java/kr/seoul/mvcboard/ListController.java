@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,7 +35,7 @@ public class ListController extends HttpServlet {
 		map.put("pageSize", pageSize);
 		
 		int count = dao.selectCount(map);
-		String pagingImg = BoardPage.pagingStr(count, pageSize, 5, pageNum, "/list.do");
+		String pagingImg = BoardPage.pagingStr(count, pageSize, 5, pageNum, "./list.do");
 		map.put("pagingImg", pagingImg);
 
 		List<MVCBoardDTO> board = dao.selectListPage(map);
