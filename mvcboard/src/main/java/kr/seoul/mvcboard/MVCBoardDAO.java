@@ -85,4 +85,17 @@ public class MVCBoardDAO extends DBConnPool {
 		return result;
 	}
 
+	// 다운로드 횟수를 1 증가시킵니다.
+	public void downCountPlus(String idx) {
+	    String sql = "UPDATE mvcboard SET "
+	            + " downcount=downcount+1 "
+	            + " WHERE idx=? "; 
+	    try {
+	        psmt = con.prepareStatement(sql);
+	        psmt.setString(1, idx);
+	        psmt.executeUpdate();
+	    }
+	    catch (Exception e) {}
+	}
+
 }

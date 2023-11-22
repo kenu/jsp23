@@ -59,7 +59,7 @@
             <td>${ row.postdate }</td>  <!-- 작성일 -->
             <td>  <!-- 첨부 파일 -->
             <c:if test="${ not empty row.ofile }">
-                <a href="../mvcboard/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
+                <a href="./download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
             </c:if>
             </td>
         </tr>
