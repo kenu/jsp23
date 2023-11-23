@@ -35,9 +35,9 @@ public class NaverSMTP {
         auth = new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                String userName = System.getenv("EMAIL_USER");
-				String password = System.getenv("EMAIL_PASS");
-				return new PasswordAuthentication(userName, password);
+                String userName =  System.getenv("EMAIL_USER");
+                String password =  System.getenv("EMAIL_PASS");
+				        return new PasswordAuthentication(userName, password);
             }
         };
     }
