@@ -61,7 +61,7 @@ function errFunc(e) {
 <div>
     <div>
         <form id="searchFrm">
-            한 페이지에 10개씩 출력됨 <br />
+            한 페이지에 10개씩 출력됨. <br />
             <select id="startNum">
                 <option value="1">1페이지</option>
                 <option value="11">2페이지</option>
